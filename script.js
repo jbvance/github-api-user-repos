@@ -1,6 +1,5 @@
 function getReposByHandle(searchTerm) {
-  const url = `https://api.github.com/users/${searchTerm}/repos`
- //const url = "https://api.github.com/users/jbvance/repos"
+  const url = `https://api.github.com/users/${searchTerm}/repos` 
   fetch(url)
     .then(res => {      
       if (res.ok) {        
@@ -19,11 +18,7 @@ function getReposByHandle(searchTerm) {
 function displayRepos(repos) {
   let strHtml = '';
   $('#results-list').empty();
-  for (let i = 0; i < repos.length; i++) {
-    // for each video object in the articles
-    //array, add a list item to the results 
-    //list with the article title, source, author,
-    //description, and image
+  for (let i = 0; i < repos.length; i++) {    
     $('#results-list').append(
       `<li>
         <h3>
